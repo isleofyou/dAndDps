@@ -12,6 +12,7 @@ class App extends Component {
     super();
     this.state = {
       weapons: [],
+      chosenWeapon: {},
       error: null
     };
   }
@@ -27,6 +28,11 @@ class App extends Component {
       })
   }
 
+  setWeapon = (name) => {
+    const clickedWeapon = this.state.weapons.find(weapon => name === weapon.name)
+    this.setState({ chosenWeapon: clickedWeapon})
+  }
+
 
   render = () => {
     return (
@@ -36,7 +42,7 @@ class App extends Component {
           <Route path='/' element={
             <div className='weapons-page'>
               <Highlight />
-              <Inventory weapons={this.state.weapons}/>
+              <Inventory weapons={this.state.weapons} setWeapon={this.setWeapon}/>
             </div>
           }
           />

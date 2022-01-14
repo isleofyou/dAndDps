@@ -1,7 +1,7 @@
 import React from 'react'; 
 import WeaponsCard from '../WeaponsCard/WeaponsCard';
 
-export default function Inventory({ weapons }) {
+export default function Inventory({ weapons, setWeapon }) {
 
   const allWeapons = weapons.map(weapon => {
     return (
@@ -9,6 +9,8 @@ export default function Inventory({ weapons }) {
           name={weapon.name}
           cost={weapon.cost}
           category={weapon.category}
+          setWeapon={setWeapon}
+          key={weapon.name}
           />
       )
     });
