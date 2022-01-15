@@ -6,6 +6,7 @@ import Roll from '../Roll/Roll';
 import { Component } from 'react';
 import { getAllWeapons } from '../../apiCalls';
 import Footer from '../Footer/Footer';
+import ButtonContainer from '../ButtonContainer/ButtonContainer';
 
 class App extends Component {
   constructor() {
@@ -33,6 +34,16 @@ class App extends Component {
     this.setState({ chosenWeapon: clickedWeapon})
   }
 
+  showAll = () => {
+    this.setState({ chosenWeapon: null })
+  }
+
+  showFavorites = () => {
+    let favoriteWeapons = this.state.weapons.filter(weapon => {
+      return weapon.favorite;
+    })
+    this.setState({weapons: favoriteWeapons})
+  }
 
   render = () => {
     return (
@@ -43,7 +54,10 @@ class App extends Component {
             <div className='weapons-page'>
               {this.state.chosenWeapon && <Highlight chosenWeapon={this.state.chosenWeapon}/>}
               <Inventory weapons={this.state.weapons} setWeapon={this.setWeapon}/>
+              <ButtonContainer showAll={this.showAll} showFavorites={this.showFavorites}/>
             </div>
+
+
           }
           />
           <Route path='/roll' element={
