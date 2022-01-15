@@ -7,6 +7,8 @@ import { Component } from 'react';
 import { getAllWeapons } from '../../apiCalls';
 import Footer from '../Footer/Footer';
 import ButtonContainer from '../ButtonContainer/ButtonContainer';
+import './App.css';
+import WeaponsTable from '../WeaponsTable/WeaponsTable';
 
 class App extends Component {
   constructor() {
@@ -22,7 +24,7 @@ class App extends Component {
     const allWeapons = getAllWeapons();
     Promise.all([allWeapons])
       .then(data => {
-        this.setState({ weapons: data[0].results });
+        this.setState({ weapons: data[0].results, chosenWeapon: null });
       })
       .catch(error => {
         this.setState({ error: error.message })
@@ -45,6 +47,14 @@ class App extends Component {
     this.setState({weapons: favoriteWeapons})
   }
 
+  showSorting = () => {
+
+  }
+
+  clear = () => {
+    this.componentDidMount();
+  }
+
   render = () => {
     return (
       <main className='App'>
@@ -53,8 +63,7 @@ class App extends Component {
           <Route path='/' element={
             <div className='weapons-page'>
               {this.state.chosenWeapon && <Highlight chosenWeapon={this.state.chosenWeapon}/>}
-              <Inventory weapons={this.state.weapons} setWeapon={this.setWeapon}/>
-              <ButtonContainer showAll={this.showAll} showFavorites={this.showFavorites}/>
+              <WeaponsTable weapons={this.state.weapons} setWeapon={this.setWeapon}/>
             </div>
 
 
@@ -68,6 +77,7 @@ class App extends Component {
           }
           />
         </Routes>
+        <ButtonContainer showAll={this.showAll} showFavorites={this.showFavorites} showSorting={this.showSorting} clear={this.clear}/>
         <Footer />
       </main>
     )
