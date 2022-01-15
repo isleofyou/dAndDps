@@ -38,10 +38,10 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-        <Routes>
+        <Routes> 
           <Route path='/' element={
             <div className='weapons-page'>
-              <Highlight />
+              {this.state.chosenWeapon && <Highlight chosenWeapon={this.state.chosenWeapon}/>}
               <Inventory weapons={this.state.weapons} setWeapon={this.setWeapon}/>
             </div>
           }
