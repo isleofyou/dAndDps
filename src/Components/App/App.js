@@ -47,10 +47,6 @@ class App extends Component {
     this.setState({weapons: favoriteWeapons})
   }
 
-  showSorting = () => {
-
-  }
-
   clear = () => {
     this.componentDidMount();
   }
@@ -68,7 +64,7 @@ class App extends Component {
 
     return (
       <main className='app'>
-        <Header />
+        <Header showAll={this.showAll} clear={this.clear}/>
         <Routes> 
           <Route path='/' element={
             <div className='weapons-page'>

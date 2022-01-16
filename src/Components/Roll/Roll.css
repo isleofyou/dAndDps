@@ -1,0 +1,25 @@
+.roll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 200px;
+}
+
+.damage {
+  font-size: 78px;
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.damage-container {
+  position: relative;
+  text-align: center;
+}
+
+.damage-container img {
+  height: 40vh;
+  width: auto;
+}
