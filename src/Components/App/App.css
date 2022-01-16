@@ -3,4 +3,5 @@
   display: flex;
   justify-content: space-between; 
   font-family: 'MyFont';
+  align-items: center;
 }

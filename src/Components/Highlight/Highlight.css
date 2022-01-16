@@ -1,13 +1,43 @@
 .chosen-weapon {
   border: 1px solid black;
   border-collapse: collapse;
+  width: auto;
+  margin: 10px;
+  height: fit-content;
+  min-width: 350px;
 }
 
 .weapon-pic {
-  height: 15vh;
+  width: auto;
+  height: 150px;
+  margin: 5px;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
+}
+
+button {
+  padding: 3px;
+  margin: 8px;
+}
+
+.weapon-name {
+  font-weight: 900;
+  font-size: 69px;
+  margin: 1rem;
+  padding: 0px;
+}
+
+.weapon-info {
+  font-size: 27px;
+  padding-left: 4px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

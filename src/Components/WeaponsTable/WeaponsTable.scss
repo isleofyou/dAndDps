@@ -3,8 +3,9 @@ img {
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
+  width: 70vw;
+  border: 1px solid black;
 }
 
 thead {
@@ -13,18 +14,20 @@ thead {
 }
 
 thead th {
-  text-align: left;
+  text-align: center;
   border-bottom: 2px solid black;
 }
 
 thead button {
-  border: 0;
+  order: 0;
   border-radius: none;
+  border: none;
   font-family: inherit;
   font-weight: 700;
-  font-size: inherit;
+  font-size: large;
   padding: 0.5em;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
+  background-color: none;
 }
 
 th, td {
@@ -46,32 +49,33 @@ td {
 
 thead button.ascending::after {
   content: '⬇';
-  display: inline;
+  display: contents;
   margin-left: 1em;
 }
 
 thead button.descending::after {
   content: '⬆';
-  display: inline;
+  display: contents;
   margin-left: 1em;
 }
 
 tbody tr:hover {
-  background-color: grey;
+  background-color: rgb(128, 128, 128);
 }
 
 tbody td {
+  font-size: x-large;
   padding: 0.5em;
   border-bottom: 1px solid black;
 }
 
 tbody {
   display: block;
-  max-height: 200px;
+  height: 100vh;
   overflow-y: scroll;
+
 }
 
 .weapon-table {
-  width: 70vw;
-  border: 1px solid black;
+
 }
