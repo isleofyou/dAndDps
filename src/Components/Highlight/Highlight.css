@@ -1,0 +1,13 @@
+.chosen-weapon {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.weapon-pic {
+  height: 15vh;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
