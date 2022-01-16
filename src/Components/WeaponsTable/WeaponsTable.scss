@@ -46,13 +46,13 @@ td {
 
 thead button.ascending::after {
   content: '⬇';
-  display: inline-block;
+  display: inline;
   margin-left: 1em;
 }
 
 thead button.descending::after {
   content: '⬆';
-  display: inline-block;
+  display: inline;
   margin-left: 1em;
 }
 
@@ -71,7 +71,7 @@ tbody {
   overflow-y: scroll;
 }
 
-.scroll {
-  height: 300px;
-  overflow-y: scroll;
+.weapon-table {
+  width: 70vw;
+  border: 1px solid black;
 }

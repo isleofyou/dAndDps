@@ -106,7 +106,7 @@ const WeaponsTable = (props) => {
             <tr key={item.name} onClick={() => props.setWeapon(item.name)}>
               <td>{item.name}</td>
               <td>${convertCost(item.cost)}</td>
-              <td className='category'>{convertCategory(item.category)}</td>
+              <td className='category'>{convertCategory(item.category.split(' ')[1])}</td>
             </tr>
           ))}
         </tbody>
