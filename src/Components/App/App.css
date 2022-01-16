@@ -1,7 +1,15 @@
 .weapons-page {
   flex-direction: row;
   display: flex;
-  justify-content: space-between; 
+  justify-content: center; 
+  font-family: 'MyFont';
+  align-items: center;
+}
+
+.roll-page {
+  flex-direction: row;
+  display: flex;
+  justify-content: center; 
   font-family: 'MyFont';
   align-items: center;
 }

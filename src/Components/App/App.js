@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../Header/Header';
 import Highlight from '../Highlight/Highlight';
 import Roll from '../Roll/Roll';
@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer';
 import ButtonContainer from '../ButtonContainer/ButtonContainer';
 import './App.css';
 import WeaponsTable from '../WeaponsTable/WeaponsTable';
+
 
 class App extends Component {
   constructor() {
@@ -46,18 +47,24 @@ class App extends Component {
     this.setState({weapons: favoriteWeapons})
   }
 
-  showSorting = () => {
-
-  }
-
   clear = () => {
     this.componentDidMount();
   }
 
+  calculateDamage = () => {
+    let splitDamage = this.state.chosenWeapon.damage_dice.split('d');
+    let times = parseInt(splitDamage[0]);
+    let damageMax = parseInt(splitDamage[1]);
+    let max = (times * damageMax);
+      let result = Math.floor(Math.random() * (max) + 1);
+      return result;
+  }
+  
   render = () => {
+
     return (
       <main className='app'>
-        <Header />
+        <Header showAll={this.showAll} clear={this.clear}/>
         <Routes> 
           <Route path='/' element={
             <div className='weapons-page'>
@@ -68,10 +75,10 @@ class App extends Component {
             </div>
           }
           />
-          <Route path='/roll' element={
+          <Route path='/roll' element={!this.state.chosenWeapon ? <Navigate to='/' /> :
             <div className='roll-page'>
-              <Highlight />
-              <Roll />
+              {this.state.chosenWeapon && <Highlight chosenWeapon={this.state.chosenWeapon}/>}
+              <Roll calculateDamage={this.calculateDamage}/>
             </div>
           }
           />
