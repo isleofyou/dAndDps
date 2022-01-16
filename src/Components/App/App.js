@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import Highlight from '../Highlight/Highlight';
-import Inventory from '../Inventory/Inventory';
 import Roll from '../Roll/Roll';
 import { Component } from 'react';
 import { getAllWeapons } from '../../apiCalls';
@@ -57,16 +56,16 @@ class App extends Component {
 
   render = () => {
     return (
-      <main className='App'>
+      <main className='app'>
         <Header />
         <Routes> 
           <Route path='/' element={
             <div className='weapons-page'>
               {this.state.chosenWeapon && <Highlight chosenWeapon={this.state.chosenWeapon}/>}
-              <WeaponsTable weapons={this.state.weapons} setWeapon={this.setWeapon}/>
+              <div className='table'>
+                <WeaponsTable weapons={this.state.weapons} setWeapon={this.setWeapon}/>
+              </div>
             </div>
-
-
           }
           />
           <Route path='/roll' element={

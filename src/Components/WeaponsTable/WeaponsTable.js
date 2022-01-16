@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './WeaponsTable.css';
-
+import melee from '../../assets/melee.png';
+import ranged from '../../assets/ranged.png';
+import './WeaponsTable.scss';
 
 const useSortableData = (items, config = null) => {
+
   const [sortConfig, setSortConfig] = React.useState(config);
 
   const sortedItems = React.useMemo(() => {
@@ -37,16 +39,36 @@ const useSortableData = (items, config = null) => {
 };
 
 const WeaponsTable = (props) => {
-  const { items, requestSort, sortConfig, setWeapon } = useSortableData(props.weapons);
+
+  const { items, requestSort, sortConfig } = useSortableData(props.weapons);
+
   const getClassNamesFor = (name) => {
     if (!sortConfig) {
       return;
     }
     return sortConfig.key === name ? sortConfig.direction : undefined;
   };
+
+  const convertCost = (cost) => {
+    return cost.split(' ')[0];
+
+  }
+
+  const convertCategory = (category) => {
+    if (category.includes('Melee')) {
+      return (
+        <img src={melee} alt='melee'/>
+      )
+    } else {
+      return (
+        <img className='damage-type' src={ranged} alt='ranged'/>
+      )
+    }
+  }
+
   return (
-    <table>
-      <caption>Products</caption>
+    <table className='weapon-table'>
+      <caption>Weapons</caption>
       <thead>
         <tr>
           <th>
@@ -61,32 +83,34 @@ const WeaponsTable = (props) => {
           <th>
             <button
               type="button"
-              onClick={() => requestSort('price')}
-              className={getClassNamesFor('price')}
+              onClick={() => requestSort('cost')}
+              className={getClassNamesFor('cost')}
             >
-              Price
+              Cost
             </button>
           </th>
           <th>
             <button
               type="button"
-              onClick={() => requestSort('stock')}
-              className={getClassNamesFor('stock')}
+              onClick={() => requestSort('category')}
+              className={getClassNamesFor('category')}
             >
-              In Stock
+              Category
             </button>
           </th>
         </tr>
       </thead>
+    <div className='scroll'>
       <tbody>
-        {items.map((item) => (
-          <tr key={item.name} onClick={() => props.setWeapon(item.name)}>
-            <td>{item.name}</td>
-            <td>${item.cost}</td>
-            <td>{item.category}</td>
-          </tr>
-        ))}
-      </tbody>
+          {items.map((item) => (
+            <tr key={item.name} onClick={() => props.setWeapon(item.name)}>
+              <td>{item.name}</td>
+              <td>${convertCost(item.cost)}</td>
+              <td className='category'>{convertCategory(item.category)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </div>  
     </table>
   );
 };
