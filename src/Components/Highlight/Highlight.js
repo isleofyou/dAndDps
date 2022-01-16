@@ -1,15 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import './Highlight.css';
 
 export default function Highlight(chosenWeapon) {
   const highlightWeapon = chosenWeapon.chosenWeapon;
-
   return (
     <div className='chosen-weapon'>
-      <p>{highlightWeapon.name}</p>
-      <p>{highlightWeapon.cost}</p>
-      <p>{highlightWeapon.damage_type}</p>
-      <p>{highlightWeapon.weight}</p>
-      {highlightWeapon.properties && <p>{highlightWeapon.properties.join(', ')}</p>}
+      <div className='centered'>
+        <img className='weapon-pic' src={require(`../../assets/weaponPics/${highlightWeapon.slug}.png`)} alt={highlightWeapon.name}/>
+        <h3 className='weapon-name'>{highlightWeapon.name}</h3>
+      </div>
+      <p className='weapon-info'>Damage: {highlightWeapon.damage_dice}</p>
+      <p className='weapon-info'>Cost: {highlightWeapon.cost}</p>
+      <p className='weapon-info'>Damage type: {highlightWeapon.damage_type}</p>
+      <p className='weapon-info'>Weight: {highlightWeapon.weight}</p>
+      {highlightWeapon.properties && <p className='weapon-info'>Properties: {highlightWeapon.properties.join(', ')}</p>}
+      <div className='button-container'>
+        <Link to='/roll'>
+          <button>Roll</button>   
+        </Link>
+      </div>
     </div>
   )
 }

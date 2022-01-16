@@ -14,7 +14,7 @@ class App extends Component {
     super();
     this.state = {
       weapons: [],
-      chosenWeapon: {},
+      chosenWeapon: null,
       error: null
     };
   }
