@@ -3,11 +3,10 @@ img {
 }
 
 table {
+  table-layout:fixed;
   border-collapse: collapse;
   width: 70vw;
   border: 1px solid black;
-  border-radius: 6%;
-  overflow: hidden;
 }
 
 td:hover {
@@ -16,6 +15,8 @@ td:hover {
 
 caption {
   font-size: xx-large;
+  margin-bottom: 20px;
+  margin-top:20px;
 }
 
 thead {
@@ -23,10 +24,6 @@ thead {
   width: calc(100% - 17px);
 }
 
-thead th {
-  text-align: center;
-  border-bottom: 2px solid black;
-}
 
 thead button {
   order: 0;
@@ -47,6 +44,7 @@ th, td {
 }
 
 tr {
+  background: black;
   display: table;
   width: 100%;
   box-sizing: border-box;
@@ -79,6 +77,16 @@ tbody td {
 
 tbody {
   display: block;
-  height: 100vh;
+  height: 61.6vh;
   overflow-y: scroll;
+}
+
+tbody::-webkit-scrollbar{
+  background-color: black;
+}
+tbody::-webkit-scrollbar-thumb{
+  background-color: gray;
+}
+table::-webkit-scrollbar-thumb:window-inactive{
+  display: none;
 }

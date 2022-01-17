@@ -5,6 +5,11 @@ body {
   background-repeat: no-repeat;
 
 }
+.nav-container {
+  display: flex;
+  background-color: #191b21;
+  justify-content: space-around;
+}
 
 .weapons-page {
   flex-direction: row;
@@ -20,4 +25,6 @@ body {
   justify-content: center; 
   font-family: 'MyFont';
   align-items: center;
+  background: #433d3d;
+  border-radius: 3%;
 }
