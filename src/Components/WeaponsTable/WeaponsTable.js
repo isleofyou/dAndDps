@@ -103,7 +103,7 @@ const WeaponsTable = (props) => {
     <div className='scroll'>
       <tbody>
           {items.map((item) => (
-            <tr key={item.name} onClick={() => props.setWeapon(item.name)}>
+            <tr className='row' key={item.name} onClick={() => props.setWeapon(item.name)}>
               <td>{item.name}</td>
               <td>${convertCost(item.cost)}</td>
               <td className='category'>{convertCategory(item.category.split(' ')[1])}</td>

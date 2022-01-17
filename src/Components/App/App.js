@@ -37,14 +37,7 @@ class App extends Component {
   }
 
   showAll = () => {
-    this.setState({ chosenWeapon: null })
-  }
-
-  showFavorites = () => {
-    let favoriteWeapons = this.state.weapons.filter(weapon => {
-      return weapon.favorite;
-    })
-    this.setState({weapons: favoriteWeapons})
+    
   }
 
   clear = () => {
@@ -64,7 +57,7 @@ class App extends Component {
 
     return (
       <main className='app'>
-        <Header showAll={this.showAll} clear={this.clear}/>
+        <Header showAll={this.showAll} clear={this.clear} chosenWeapon={this.state.chosenWeapon}/>
         <Routes> 
           <Route path='/' element={
             <div className='weapons-page'>

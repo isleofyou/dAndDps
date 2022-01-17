@@ -1,13 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
-
-export default function Header(showAll, clear) {
+export default function Header({showAll, clear, chosenWeapon}) {
 
   return (
-    <div>
+    <div className='header'>
       <p className='app-name'>D&DPS</p>
-      <button className='button' onClick={showAll}>All Items</button>
-      <button className='button' onClick={clear}>Clear</button>
+      <div className='nav-container'>
+      { chosenWeapon && 
+        <button className='button' onClick={() => clear()}>Clear</button>}
+      
+      </div>
     </div>
   )
 }

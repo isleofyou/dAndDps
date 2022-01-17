@@ -1,9 +1,17 @@
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #1a1b21;
+  color: white;
+  background-repeat: no-repeat;
+
+}
+
 .weapons-page {
   flex-direction: row;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   font-family: 'MyFont';
-  align-items: center;
+  align-items: start;
 }
 
 .roll-page {
