@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 import ButtonContainer from '../ButtonContainer/ButtonContainer';
 import './App.css';
 import WeaponsTable from '../WeaponsTable/WeaponsTable';
-
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor() {
@@ -83,4 +83,9 @@ class App extends Component {
   }       
 };
 
-export default App;
+App.propTypes = {
+  weapons: PropTypes.object,
+  
+};
+
+export default App; 

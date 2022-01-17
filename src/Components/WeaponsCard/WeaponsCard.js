@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function WeaponsCard({ name, cost, category, setWeapon }) {
+function WeaponsCard({ props }) {
   return (
     <div className='weapon-container'>
-      <p onClick={() => setWeapon(name)}>{name} {cost} {category}</p>
+      <p onClick={() => props.setWeapon(props.name)}>{props.name} {props.cost} {props.category}</p>
     </div>
   )
 }
+
+WeaponsCard.propTypes = {
+  name: PropTypes.number,
+  cost: PropTypes.string
+};
+
+export default WeaponsCard;

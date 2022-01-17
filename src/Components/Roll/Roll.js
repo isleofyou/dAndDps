@@ -6,7 +6,6 @@ export default function Roll({calculateDamage}) {
 
   const [damage, setDamage] = useState(calculateDamage());
 
-
   return (
     <div className='roll-container'>
       <div className='damage-container'>
