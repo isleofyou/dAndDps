@@ -25,7 +25,7 @@ export default function Highlight(chosenWeapon) {
         {highlightWeapon.properties && <p className='weapon-info'>Properties: {highlightWeapon.properties.join(', ')}</p>}
         <div className='button-container'>
           <Link to='/roll'>
-            {rolling && <button onClick={() => hideRoll()}>Roll</button>   }
+            {rolling && <button onClick={() => hideRoll()}>Roll damage</button>   }
           </Link>
         </div>
       </div>

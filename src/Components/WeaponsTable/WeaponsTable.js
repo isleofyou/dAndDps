@@ -100,7 +100,6 @@ const WeaponsTable = (props) => {
           </th>
         </tr>
       </thead>
-    <div className='scroll'>
       <tbody>
           {items.map((item) => (
             <tr className='row' key={item.name} onClick={() => props.setWeapon(item.name)}>
@@ -110,7 +109,6 @@ const WeaponsTable = (props) => {
             </tr>
           ))}
         </tbody>
-      </div>  
     </table>
   );
 };

@@ -1,4 +1,5 @@
 .chosen-weapon {
+
   border: 1px solid black;
   border-collapse: collapse;
   width: auto;
@@ -6,6 +7,7 @@
   height: fit-content;
   min-width: 350px;
   background-color: #2c2e37;
+  border-radius: 1%;
 }
 
 .weapon-pic {
@@ -23,9 +25,26 @@
   justify-content: center;
 }
 
+button:active {
+  transform: scale(0.92);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 button {
   padding: 3px;
   margin: 8px;
+  font-family: 'MyFont';
+  font-size: xxx-large;
+  color: white;
+  height: auto;
+  width: auto;
+  border: 1px solid white;
+  background-color: rgb(0,0,0);
+  background-image: url(http://www.zingerbugimages.com/backgrounds/black_abstract_stone_pattern_tileable.jpg);
+  background-position: top left;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  border-radius: 2%;
 }
 
 .weapon-name {
@@ -50,5 +69,6 @@ button {
 .weapon-container {
   display: flex;
   justify-content: start;
-  margin-top: 22px;
+  margin-top: 62px;
+  
 }
