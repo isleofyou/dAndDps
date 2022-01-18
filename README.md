@@ -11,7 +11,6 @@ Mod3 2108 FE - David Tran
   - [Project Specs](#project-specs)
   - [Abstract](#abstract)
   - [Architecture](#architecture)
-  - [Artists](#artists)
   - [Wins](#wins)
   - [Challenges + Improvements](#challenges-+-Improvements)
 
