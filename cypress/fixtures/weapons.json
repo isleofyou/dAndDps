@@ -1,0 +1,54 @@
+{
+  "count": 37,
+  "next": null,
+  "previous": null,
+  "results": [
+  {
+  "name": "Club",
+  "slug": "club",
+  "category": "Simple Melee Weapons",
+  "document__slug": "wotc-srd",
+  "document__title": "Systems Reference Document",
+  "document__license_url": "http://open5e.com/legal",
+  "cost": "1 sp",
+  "damage_dice": "1d4",
+  "damage_type": "bludgeoning",
+  "weight": "2 lb.",
+  "properties": [
+  "light"
+  ]
+  },
+  {
+  "name": "Dagger",
+  "slug": "dagger",
+  "category": "Simple Melee Weapons",
+  "document__slug": "wotc-srd",
+  "document__title": "Systems Reference Document",
+  "document__license_url": "http://open5e.com/legal",
+  "cost": "2 gp",
+  "damage_dice": "1d4",
+  "damage_type": "piercing",
+  "weight": "1 lb.",
+  "properties": [
+  "finesse",
+  "light",
+  "thrown (range 20/60)"
+  ]
+  },
+  {
+  "name": "Greatclub",
+  "slug": "greatclub",
+  "category": "Simple Melee Weapons",
+  "document__slug": "wotc-srd",
+  "document__title": "Systems Reference Document",
+  "document__license_url": "http://open5e.com/legal",
+  "cost": "2 sp",
+  "damage_dice": "1d8",
+  "damage_type": "bludgeoning",
+  "weight": "10 lb.",
+  "properties": [
+  "two-handed"
+  ]
+  }
+]
+}
