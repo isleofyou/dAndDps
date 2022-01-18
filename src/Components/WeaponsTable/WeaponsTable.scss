@@ -9,10 +9,6 @@ table {
   border: 1px solid black;
 }
 
-td:hover {
-  background-color: gray;
-}
-
 caption {
   font-size: xx-large;
   margin-bottom: 20px;
@@ -44,7 +40,7 @@ th, td {
 }
 
 tr {
-  background: black;
+  background: #2c2e37;
   display: table;
   width: 100%;
   box-sizing: border-box;
@@ -54,7 +50,6 @@ td {
   text-align: center;
   border-bottom: none;
   border-left: none;
-  background-color: #2c2e37;
 }
 
 thead button.ascending::after {
@@ -79,6 +74,7 @@ tbody {
   display: block;
   height: 61.6vh;
   overflow-y: scroll;
+  background-color: slategray;
 }
 
 tbody::-webkit-scrollbar{
@@ -89,4 +85,9 @@ tbody::-webkit-scrollbar-thumb{
 }
 table::-webkit-scrollbar-thumb:window-inactive{
   display: none;
+}
+
+tr:hover {
+  background-color: white;
+  color: #2c2e37;
 }
