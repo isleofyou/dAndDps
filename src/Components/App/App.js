@@ -22,6 +22,7 @@ class App extends Component {
 
   componentDidMount = () => {
     const allWeapons = getAllWeapons();
+    console.log(allWeapons)
     Promise.all([allWeapons])
       .then(data => {
         this.setState({ weapons: data[0].results, chosenWeapon: null });

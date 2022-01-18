@@ -1,4 +1,8 @@
-[
+{
+  "count": 37,
+  "next": null,
+  "previous": null,
+  "results": [
   {
   "name": "Club",
   "slug": "club",
@@ -47,4 +51,4 @@
   ]
   }
 ]
-  
+}

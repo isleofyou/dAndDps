@@ -15,7 +15,7 @@ describe('D&DPS battle screen test', () => {
 
   it('As a user, I should be able to see a number as damage', () => {
     cy.get('h3[class="damage"]')
-      .expect('h3').to.be.within(1,4)
+      .should('have.length', 1)
   })
 
   it('As a user, I should be able to click on the Roll Damage button to show the battle screen', () => {
@@ -33,4 +33,14 @@ describe('D&DPS battle screen test', () => {
       .get('h3[class="weapon-name"]')
       .should('have.length', 0)
   })
+
+  it('As a user, I should be able to click on the Roll Again button to show another damage action', () => {
+    // eslint-disable-next-line no-undef
+    cy.get('button[class="roll-again"]')
+      .should('have.length', 1)
+      .click()
+      .get('h3[class="damage"]')
+      .should('have.length', 1)
+  })
+
 })

@@ -1,11 +1,9 @@
 /* eslint-disable no-undef */
 describe('D&DPS dashboard test', () => {
+
   beforeEach(() => {
-    cy.fixture('./weapons.json').then((weapons) => {
-      cy.intercept('GET', '/api.open5e.com/weapons/?format=json', {
-        statusCode: 200,
-        body: weapons
-      })
+    cy.intercept('GET', 'https://api.open5e.com/weapons/?format=json', {
+      fixture: 'weapons.json'
     });
     cy.visit('http://localhost:3000');
   })
@@ -39,9 +37,9 @@ describe('D&DPS dashboard test', () => {
       .click()
       .get('td')
       .first()
-      .contains('Battleaxe')
-      .get('td').eq(108)
-      .contains('Whip')
+      .contains('Club')
+      .get('td').eq(6)
+      .contains('Greatclub')
   })
 
   it('As a user, I should be able to click again on the name category to sort in descending order', () => {
@@ -51,9 +49,9 @@ describe('D&DPS dashboard test', () => {
       .click()
       .get('td')
       .first()
-      .contains('Whip')
-      .get('td').eq(108)
-      .contains('Battleaxe')
+      .contains('Greatclub')
+      .get('td').eq(6)
+      .contains('Club')
   })
 
   it('As a user, I should be able to click on the cost category to sort in ascending order', () => {
@@ -62,8 +60,8 @@ describe('D&DPS dashboard test', () => {
       .get('td').eq(1)
  
       .contains('$1')
-      .get('td').eq(109)
-      .contains('$75')
+      .get('td').eq(7)
+      .contains('$2')
   })
 
   it('As a user, I should be able to click on the cost category again to sort in descending order', () => {
@@ -72,8 +70,8 @@ describe('D&DPS dashboard test', () => {
       .click()
       .get('td').eq(1)
  
-      .contains('$75')
-      .get('td').eq(109)
+      .contains('$2')
+      .get('td').eq(7)
       .contains('$1')
   })
 
