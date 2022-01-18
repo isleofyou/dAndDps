@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import melee from '../../assets/melee.png';
 import ranged from '../../assets/ranged.png';
 import './WeaponsTable.scss';
+import PropTypes from 'prop-types';
 
 const useSortableData = (items, config = null) => {
 
@@ -114,3 +115,8 @@ const WeaponsTable = (props) => {
 };
 
 export default WeaponsTable;
+
+WeaponsTable.propTypes = {
+  items: PropTypes.object,
+};
+

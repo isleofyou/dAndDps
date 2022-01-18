@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Roll.css';
+import PropTypes from 'prop-types';
 
 export default function Roll({calculateDamage}) {
 
@@ -15,3 +16,8 @@ export default function Roll({calculateDamage}) {
     </div>
   )
 }
+
+Roll.propTypes = {
+  calculateDamage: PropTypes.func
+};
+

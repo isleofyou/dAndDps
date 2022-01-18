@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Highlight.css';
+import PropTypes from 'prop-types';
 
 export default function Highlight(chosenWeapon) {
 
@@ -32,3 +33,7 @@ export default function Highlight(chosenWeapon) {
     </div>
   )
 }
+
+Highlight.propTypes = {
+  chosenWeapon: PropTypes.object
+};
