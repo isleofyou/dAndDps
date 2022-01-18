@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
-
-export default function Header({showAll, clear, chosenWeapon}) {
+import PropTypes from 'prop-types';
+export default function Header({ clear, chosenWeapon }) {
 
   return (
     <div className='header' onClick={() => clear()}>
@@ -14,3 +14,9 @@ export default function Header({showAll, clear, chosenWeapon}) {
     </div>
   )
 }
+
+
+Header.propTypes = {
+  clear: PropTypes.func,
+  chosenWeapon: PropTypes.object,
+};

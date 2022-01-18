@@ -7,7 +7,6 @@ import { getAllWeapons } from '../../apiCalls';
 import Footer from '../Footer/Footer';
 import './App.css';
 import WeaponsTable from '../WeaponsTable/WeaponsTable';
-import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor() {
@@ -21,7 +20,6 @@ class App extends Component {
 
   componentDidMount = () => {
     const allWeapons = getAllWeapons();
-    console.log(allWeapons)
     Promise.all([allWeapons])
       .then(data => {
         this.setState({ weapons: data[0].results, chosenWeapon: null });
@@ -86,11 +84,6 @@ class App extends Component {
       </main>
     )
   }       
-};
-
-App.propTypes = {
-  weapons: PropTypes.object,
-  
 };
 
 export default App; 
