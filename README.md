@@ -30,14 +30,11 @@ Mod3 2108 FE - David Tran
 
 ## Technologies
   - Javascript
-  - CSS / HTML
-  - Atom / VSCode
+  - CSS & Sass/ HTML
   - Git Version Control / GitHub
   - Webpack node package
   - React 
   - Router
-  - Google Chrome or Web Browser of User's Choice
-  - Mac OS Terminal/Command Line
   - Cypress
   - PropTypes
 
