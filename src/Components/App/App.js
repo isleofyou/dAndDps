@@ -5,7 +5,6 @@ import Roll from '../Roll/Roll';
 import { Component } from 'react';
 import { getAllWeapons } from '../../apiCalls';
 import Footer from '../Footer/Footer';
-import ButtonContainer from '../ButtonContainer/ButtonContainer';
 import './App.css';
 import WeaponsTable from '../WeaponsTable/WeaponsTable';
 import PropTypes from 'prop-types';
@@ -57,7 +56,6 @@ class App extends Component {
     let damageMax = parseInt(splitDamage[1]);
     let max = (times * damageMax);
     let result = Math.floor(Math.random() * (max) + 1);
-      console.log(result)
       return result;
   }
   
@@ -84,7 +82,6 @@ class App extends Component {
           }
           />
         </Routes>
-        <ButtonContainer showAll={this.showAll} showFavorites={this.showFavorites} showSorting={this.showSorting} clear={this.clear}/>
         <Footer />
       </main>
     )
