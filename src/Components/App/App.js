@@ -45,11 +45,18 @@ class App extends Component {
   }
 
   calculateDamage = () => {
+    if(this.state.chosenWeapon.damage_dice === '0') {
+      return 0
+    }
+    if(this.state.chosenWeapon.damage_dice === '1') {
+      return 1
+    }
     let splitDamage = this.state.chosenWeapon.damage_dice.split('d');
     let times = parseInt(splitDamage[0]);
     let damageMax = parseInt(splitDamage[1]);
     let max = (times * damageMax);
-      let result = Math.floor(Math.random() * (max) + 1);
+    let result = Math.floor(Math.random() * (max) + 1);
+      console.log(result)
       return result;
   }
   

@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function WeaponsCard({ props }) {
+const WeaponsCard = ({ setWeapon, name, cost, category }) => {
   return (
     <div className='weapon-container'>
-      <p onClick={() => props.setWeapon(props.name)}>{props.name} {props.cost} {props.category}</p>
+      <p onClick={() => setWeapon(name)}>{name} {cost} {category}</p>
     </div>
   )
 }
 
 WeaponsCard.propTypes = {
-  name: PropTypes.number,
-  cost: PropTypes.string
+  name: PropTypes.number.isRequired,
+  cost: PropTypes.string.isRequired,
 };
 
 export default WeaponsCard;
