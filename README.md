@@ -1,70 +1,87 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# D&DPS
 
-## Available Scripts
+Mod3 2108 FE - David Tran
 
-In the project directory, you can run:
+## Table of Contents
+  - [Installation + Setup](#set-up)
+  - [Deployed Site](#deployed-site)  
+  - [Contributors](#contributors)
+  - [Technologies](#technologies)
+  - [Project Specs](#project-specs)
+  - [Abstract](#abstract)
+  - [Architecture](#architecture)
+  - [Artists](#artists)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
 
-### `npm start`
+## Installation + Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   - Clone this repo down to your local machine: [here](https://github.com/isleofyou/dAndDps)
+   - On the command line, type: **$ npm install**
+   - On the command line, type: **$ npm start**
+   - Visit http://localhost:3000/ in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployed Site 
 
-### `npm test`
+[Click Here!](https://ccollums.github.io/rancid-tomatillos/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributors
+  - [David Tran](https://github.com/isleofyou)
 
-### `npm run build`
+## Technologies
+  - Javascript
+  - CSS / HTML
+  - Atom / VSCode
+  - Git Version Control / GitHub
+  - Webpack node package
+  - React 
+  - Router
+  - Google Chrome or Web Browser of User's Choice
+  - Mac OS Terminal/Command Line
+  - Cypress
+  - PropTypes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   
+## Project Specs
+   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
+  
+## Abstract
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is designed as a dashboard application that allows users to see a list of weapons that can be used in D&D. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The goals of this project were to gain further competency with React, reinforce end to end testing and asynchronous Javascript, and create a multi-page UX using Router. 
+ 
+## Main Dashboard 
 
-### `npm run eject`
+<p align="center">
+<img width="1440" alt="landing-page" src="https://user-images.githubusercontent.com/60856601/149999718-ae22eef9-1853-4a76-a80c-f377d2f9715d.png">
+</p>
+  
+## Weapon details
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p align="center">
+<img width="1390" alt="Details page" src="https://user-images.githubusercontent.com/60856601/149999845-f481f28e-9914-44b2-b2b0-c057dfd99a4f.png">
+</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Responsive Layout
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="center">
+<img width="483" alt="Responsive weapon" src="https://user-images.githubusercontent.com/60856601/150000005-bf53c9fc-c0c6-4b08-b826-bd28dd9103e1.png">
+  
+<img width="464" alt="Responsive table" src="https://user-images.githubusercontent.com/60856601/150000069-538dbca3-ff48-4e15-959e-ec3a6e5dc35c.png">  
+</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Architecture
+  D&DPS pulls all of its data from a third party API. On page load, we perform a fetch call and set the state of our main class component. Once the state is set the table data is loaded to the DOM. If a user clicks on a weapon the details of the weapon are shown. The user can then click the "Roll damage" button to get a damage roll specific to that weapon. Users can then roll again or go back to the main page.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Wins
+  - Succesfully created resizability
+  - Succesfully tested application end to end
+  
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Challenges + Improvements
+  - I initially faced challenges in getting the table to be formatted correctly
+  - Future improvements include functionality to favorite, add new weapons, and edit existing weapons.
