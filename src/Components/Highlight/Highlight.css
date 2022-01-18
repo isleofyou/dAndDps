@@ -29,6 +29,11 @@ button:active {
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+button:hover {
+  color: #d5d411;
+  border-color: #d5d411;
+}
+
 button {
   padding: 3px;
   margin: 8px;
@@ -69,5 +74,4 @@ button {
   display: flex;
   justify-content: start;
   margin-top: 62px;
-  
 }

@@ -70,7 +70,7 @@ const WeaponsTable = (props) => {
     <table className='weapon-table'>
       <caption>Weapons</caption>
       <thead>
-        <tr>
+        <tr className='categories'>
           <th>
             <button
               type="button"
