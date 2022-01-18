@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Roll.css';
 
-
 export default function Roll({calculateDamage}) {
 
   const [damage, setDamage] = useState(calculateDamage());
